@@ -1,0 +1,41 @@
+.navbar {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(130, 190, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 7px black;
+  margin-bottom: 15px;
+}
+
+.navbar > a {
+  padding: 0 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarLink {
+  height: 100%;
+  color: navy;
+}
+
+.navbarLink:hover {
+  text-shadow: 0 0 1.5px navy;
+}
+
+.navbarLinkAcive {
+  height: 25px;
+  color: black;
+  background-color: rgb(170, 220, 250);
+  box-shadow: 0 0 10px rgb(170, 220, 250);
+  text-shadow: 0 0 1.5px black;
+  border-radius: 10px;
+}
+
+.fillNavBlock {
+  height: 100%;
+  flex-grow: 1;  
+}

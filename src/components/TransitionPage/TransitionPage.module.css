@@ -1,0 +1,110 @@
+.spinnerButton {
+  height: 30px;
+  width: 100px;
+  color: navy;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid navy;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.spinnerButton:hover {
+  background-color: rgba(130, 190, 230, 0.5);
+}
+
+.spinnerButton:active {
+  transform: scale(0.9);
+  background-color: rgba(130, 190, 230, 0.5);
+}
+
+.spinnerButton:disabled {
+  opacity: 0.2;
+  transform: scale(1);
+  background-color: transparent;
+}
+
+.transitionSpinner {
+  color: navy;
+  font-size: 250px;
+  margin-top: 5px;
+}
+
+.transitionSpinner-entering {
+  animation: transitionSpinner-entering-animate 2s linear;
+}
+
+.transitionSpinner-entered {
+  animation: transitionSpinner-entered-animate infinite 5s linear;
+}
+
+.transitionSpinner-exiting {
+  animation: transitionSpinner-exiting-animate 3.1s linear;
+}
+
+.transitionSpinner-exited {
+  animation: transitionSpinner-exited-animate infinite 5s linear;
+}
+
+@keyframes transitionSpinner-entering-animate {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: 0.25;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes transitionSpinner-entered-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes transitionSpinner-exiting-animate {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(-36deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-360deg) scale(0);
+  }
+}
+
+@keyframes transitionSpinner-exited-animate {
+  0% {
+    opacity: 0;
+    color: rgb(130, 190, 230);
+  }
+  30% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  85% {
+    opacity: 0.9;
+    transform: scale(1);
+    color: salmon;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+    color: rgb(130, 190, 230);
+  }
+}

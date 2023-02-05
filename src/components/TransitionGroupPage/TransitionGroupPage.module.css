@@ -1,0 +1,126 @@
+.addItemForm > input {
+  color: navy;
+  width: 200px;
+  height: calc(30px - 4px);
+  border: 2px solid navy;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-right: 5px;
+  padding: 0 10px;
+}
+
+.addItemForm > input:focus,
+.addItemForm > input:active {
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: 0 0 3px navy;
+}
+
+.addItemForm > button {
+  height: 30px;
+  width: 150px;
+  color: navy;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid navy;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.addItemForm > button:hover {
+  background-color: rgba(130, 190, 230, 0.5);
+}
+
+.addItemForm > button:active {
+  transform: scale(0.9);
+  background-color: rgba(130, 190, 230, 0.5);
+  outline-offset: none;
+}
+
+.item {
+  width: 400px;
+  height: 28px;
+  background-color: rgb(130, 190, 230);
+  box-shadow: 0 0 15px rgb(130, 190, 230);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.itemList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.itemText {
+  text-align: left;
+  color: navy;
+  padding: 0 10px 0 5px;
+  margin: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.deleteItemButton {
+  color: navy;
+  font-size: 16px;;
+  margin: 0 0 0 10px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.deleteItemButton:hover,
+.deleteItemButton:active {
+  color: red;
+  transform: scale(1.1);
+}
+
+.deleteItemButton:active {
+  color: red;
+  transform: scale(0.9);
+}
+
+.itemEnterActive {
+  animation: itemEnterActive-animate 0.45s linear;
+}
+
+.itemExitActive {
+  animation: itemExitActive-animate 0.55s linear;
+}
+
+@keyframes itemEnterActive-animate {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes itemExitActive-animate {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,108 @@
+.fireImage {
+  width: 100px;
+  border-radius: 50px;
+  box-shadow: 0 0 25px white;
+  margin-top: 10px;
+  animation: fire-animate 4s linear;
+}
+
+.mainLinks {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.mainLinks > a {
+  color: navy;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgb(130, 190, 230);
+  box-shadow: 0 0 15px rgb(130, 190, 230);
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 5px auto;
+
+}
+
+.mainLinks > a:hover {
+  text-shadow: 0 0 1.5px navy;
+  transform: scale(1.05);
+}
+
+.firstLink {  
+  animation: firstLink-animate 1s linear;
+}
+
+.secondLink {
+  animation: secondLink-animate 1s linear;
+}
+
+.thirdLink {
+  animation: thirdLink-animate 1s linear;
+}
+
+.spinner {
+  font-size: 100px;
+  color: rgb(90, 150, 200);
+  animation: spinner-animate infinite 2.5s linear;
+}
+
+@keyframes fire-animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes firstLink-animate {
+  from {
+    opacity: 0.5;
+    transform: translateX(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes secondLink-animate {
+  from {
+    opacity: 0.5;
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes thirdLink-animate {
+  from {
+    opacity: 0.5;
+    transform: translateY(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes spinner-animate {
+  0% {
+    opacity: 0.3;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 0.3;
+    transform: rotate(360deg);
+  }
+}

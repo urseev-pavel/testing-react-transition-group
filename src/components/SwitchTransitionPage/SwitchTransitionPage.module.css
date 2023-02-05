@@ -1,0 +1,124 @@
+.modeSelect {
+  color: navy;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.modeSelect > p {
+  padding: 0;
+  margin: 0 0 3px 0;
+}
+
+.modeSelectInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.modeSelectInput > input:hover,
+.modeSelectInput > label:hover {
+  cursor: pointer;
+}
+
+.modeSelectInput > label {
+  margin: 0 20px 0 3px;
+  padding: 0 3px;
+}
+
+.activeLabel {
+  background-color: rgb(130, 190, 230);
+  box-shadow: 0 0 15px rgb(130, 190, 230);
+  border-radius: 10px;
+}
+
+.componentButton {
+  height: 30px;
+  width: 250px;
+  color: navy;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid navy;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.componentButton:hover {
+  background-color: rgba(130, 190, 230, 0.5);
+}
+
+.componentButton:active {
+  transform: scale(0.9);
+  background-color: rgba(130, 190, 230, 0.5);
+  outline-offset: none;
+}
+
+.componentButton:disabled {
+  opacity: 0.2;
+  transform: scale(1);
+  background-color: transparent;
+}
+
+.carImage {
+  height: 100px;
+}
+
+.carEnterActive {
+  animation: carEnterActive-animate 1.45s linear;
+}
+.carEnterDone {
+  animation: carEnterDone-animate 1s infinite linear;
+}
+
+.carExitActive {
+  animation: carExitActive-animate 1.55s linear;
+}
+
+@keyframes carEnterActive-animate {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  70% {
+    opacity: 0.5;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes carEnterDone-animate {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(-1px);
+  }
+  80% {
+    transform: translateX(+1px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes carExitActive-animate {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  30% {
+    opacity: 0.5;
+    transform: translateX(30%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,144 @@
+.imageButton {
+  height: 30px;
+  width: 140px;
+  color: navy;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid navy;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.imageButton:hover {
+  background-color: rgba(130, 190, 230, 0.5);
+}
+
+.imageButton:active {
+  transform: scale(0.9);
+  background-color: rgba(130, 190, 230, 0.5);
+  outline-offset: none;
+}
+
+.imageButton:disabled {
+  opacity: 0.2;
+  transform: scale(1);
+  background-color: transparent;
+}
+
+.dolphinImage {
+  height: 200px;
+  background: radial-gradient(rgba(255, 255, 255, 0.35), rgba(130, 190, 230, 0.9));
+  box-shadow: 0 0 25px rgb(100, 170, 220);
+  border: 2px solid rgb(130, 190, 230);
+  border-radius: 30px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.myAppear {
+  box-shadow: 0 0 150px wheat;
+}
+
+.myAppearActive {
+  animation: myEnterActive-animate 5.1s linear;
+}
+
+.myAppearDone {
+  box-shadow: 0 0 35px rgb(40, 40, 150);
+}
+
+.myEnter {
+  box-shadow: 0 0 150px rgb(100, 190, 100);
+}
+
+.myEnterActive {
+  animation: myEnterActive-animate 5.1s linear;
+}
+
+.myEnterDone {
+  animation: myEnterDone-animate 5s infinite linear;
+}
+
+.myExit {
+  box-shadow: 0 0 150px rgb(250, 150, 140);
+}
+
+.myExitActive {
+  animation: myExitActive-animate 5.1s linear;
+  background: transparent;
+}
+
+.myExitDone {
+  background: transparent;
+  box-shadow:none;
+  border: 2px solid transparent;
+  animation: myExitDone-animate 7s infinite linear;
+}
+
+@keyframes myEnterActive-animate {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    background: transparent;
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1);
+    background: transparent;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0.9);
+    box-shadow: none;background: transparent;
+  }
+  75% {
+    opacity: 0;
+    transform: scale(0.9);
+    background: radial-gradient(rgba(255, 255, 255, 0.35), rgba(130, 190, 230, 0.9));
+    box-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+@keyframes myEnterDone-animate {
+  50% {
+    box-shadow: 0 0 25px white;
+  }
+}
+
+@keyframes myExitActive-animate {
+  40% {
+    background: transparent;
+    box-shadow:none;
+    border: 2px solid transparent;
+  }
+  100% {
+    background: transparent;
+    box-shadow:none;
+    border: 2px solid transparent;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes myExitDone-animate {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
